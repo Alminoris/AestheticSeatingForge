@@ -1,0 +1,64 @@
+{
+  "variants":
+  {
+    "facing=north,variant=normal,cushion=false": { "model": "aestheticseating:block/sofa_white" },
+    "facing=south,variant=normal,cushion=false": { "model": "aestheticseating:block/sofa_white", "y": 180 },
+    "facing=west,variant=normal,cushion=false": { "model": "aestheticseating:block/sofa_white", "y": 270 },
+    "facing=east,variant=normal,cushion=false": { "model": "aestheticseating:block/sofa_white", "y": 90 },
+
+    "facing=north,variant=center,cushion=false": { "model": "aestheticseating:block/sofa_white_center" },
+    "facing=south,variant=center,cushion=false": { "model": "aestheticseating:block/sofa_white_center", "y": 180 },
+    "facing=west,variant=center,cushion=false": { "model": "aestheticseating:block/sofa_white_center", "y": 270 },
+    "facing=east,variant=center,cushion=false": { "model": "aestheticseating:block/sofa_white_center", "y": 90 },
+
+    "facing=north,variant=left,cushion=false": { "model": "aestheticseating:block/sofa_white_left" },
+    "facing=south,variant=left,cushion=false": { "model": "aestheticseating:block/sofa_white_left", "y": 180 },
+    "facing=west,variant=left,cushion=false": { "model": "aestheticseating:block/sofa_white_left", "y": 270 },
+    "facing=east,variant=left,cushion=false": { "model": "aestheticseating:block/sofa_white_left", "y": 90 },
+
+    "facing=north,variant=right,cushion=false": { "model": "aestheticseating:block/sofa_white_right" },
+    "facing=south,variant=right,cushion=false": { "model": "aestheticseating:block/sofa_white_right", "y": 180 },
+    "facing=west,variant=right,cushion=false": { "model": "aestheticseating:block/sofa_white_right", "y": 270 },
+    "facing=east,variant=right,cushion=false": { "model": "aestheticseating:block/sofa_white_right", "y": 90 },
+
+    "facing=north,variant=leftcorner,cushion=false": { "model": "aestheticseating:block/sofa_white_leftcorner" },
+    "facing=south,variant=leftcorner,cushion=false": { "model": "aestheticseating:block/sofa_white_leftcorner", "y": 180 },
+    "facing=west,variant=leftcorner,cushion=false": { "model": "aestheticseating:block/sofa_white_leftcorner", "y": 270 },
+    "facing=east,variant=leftcorner,cushion=false": { "model": "aestheticseating:block/sofa_white_leftcorner", "y": 90 },
+
+    "facing=north,variant=rightcorner,cushion=false": { "model": "aestheticseating:block/sofa_white_rightcorner" },
+    "facing=south,variant=rightcorner,cushion=false": { "model": "aestheticseating:block/sofa_white_rightcorner", "y": 180 },
+    "facing=west,variant=rightcorner,cushion=false": { "model": "aestheticseating:block/sofa_white_rightcorner", "y": 270 },
+    "facing=east,variant=rightcorner,cushion=false": { "model": "aestheticseating:block/sofa_white_rightcorner", "y": 90 },
+
+    "facing=north,variant=normal,cushion=true": { "model": "aestheticseating:block/sofa_white_cushion" },
+    "facing=south,variant=normal,cushion=true": { "model": "aestheticseating:block/sofa_white_cushion", "y": 180 },
+    "facing=west,variant=normal,cushion=true": { "model": "aestheticseating:block/sofa_white_cushion", "y": 270 },
+    "facing=east,variant=normal,cushion=true": { "model": "aestheticseating:block/sofa_white_cushion", "y": 90 },
+
+    "facing=north,variant=center,cushion=true": { "model": "aestheticseating:block/sofa_white_center_cushion" },
+    "facing=south,variant=center,cushion=true": { "model": "aestheticseating:block/sofa_white_center_cushion", "y": 180 },
+    "facing=west,variant=center,cushion=true": { "model": "aestheticseating:block/sofa_white_center_cushion", "y": 270 },
+    "facing=east,variant=center,cushion=true": { "model": "aestheticseating:block/sofa_white_center_cushion", "y": 90 },
+
+    "facing=north,variant=left,cushion=true": { "model": "aestheticseating:block/sofa_white_left_cushion" },
+    "facing=south,variant=left,cushion=true": { "model": "aestheticseating:block/sofa_white_left_cushion", "y": 180 },
+    "facing=west,variant=left,cushion=true": { "model": "aestheticseating:block/sofa_white_left_cushion", "y": 270 },
+    "facing=east,variant=left,cushion=true": { "model": "aestheticseating:block/sofa_white_left_cushion", "y": 90 },
+
+    "facing=north,variant=right,cushion=true": { "model": "aestheticseating:block/sofa_white_right_cushion" },
+    "facing=south,variant=right,cushion=true": { "model": "aestheticseating:block/sofa_white_right_cushion", "y": 180 },
+    "facing=west,variant=right,cushion=true": { "model": "aestheticseating:block/sofa_white_right_cushion", "y": 270 },
+    "facing=east,variant=right,cushion=true": { "model": "aestheticseating:block/sofa_white_right_cushion", "y": 90 },
+
+    "facing=north,variant=leftcorner,cushion=true": { "model": "aestheticseating:block/sofa_white_leftcorner_cushion" },
+    "facing=south,variant=leftcorner,cushion=true": { "model": "aestheticseating:block/sofa_white_leftcorner_cushion", "y": 180 },
+    "facing=west,variant=leftcorner,cushion=true": { "model": "aestheticseating:block/sofa_white_leftcorner_cushion", "y": 270 },
+    "facing=east,variant=leftcorner,cushion=true": { "model": "aestheticseating:block/sofa_white_leftcorner_cushion", "y": 90 },
+
+    "facing=north,variant=rightcorner,cushion=true": { "model": "aestheticseating:block/sofa_white_rightcorner_cushion" },
+    "facing=south,variant=rightcorner,cushion=true": { "model": "aestheticseating:block/sofa_white_rightcorner_cushion", "y": 180 },
+    "facing=west,variant=rightcorner,cushion=true": { "model": "aestheticseating:block/sofa_white_rightcorner_cushion", "y": 270 },
+    "facing=east,variant=rightcorner,cushion=true": { "model": "aestheticseating:block/sofa_white_rightcorner_cushion", "y": 90 }
+  }
+}

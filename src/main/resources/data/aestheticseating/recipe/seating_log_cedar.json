@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "arborealnature:cedar_log"
+    },
+    "/": {
+      "item": "arborealnature:cedar_log"
+    }
+  },
+  "pattern": [
+    "#/"
+    
+    
+  ],
+  "result": {
+    "count": 1,
+    "id": "aestheticseating:seating_log_cedar"
+  }
+}

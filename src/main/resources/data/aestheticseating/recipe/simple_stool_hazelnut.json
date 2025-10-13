@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "decorations",
+  "key": {
+    "#": {
+      "item": "arborealnature:hazelnut_slab"
+    },
+    "/": {
+      "item": "arborealnature:hazelnut_log"
+    }
+  },
+  "pattern": [
+    "###",
+    "/ /"
+  ],
+  "result": {
+    "count": 1,
+    "id": "aestheticseating:simple_stool_hazelnut"
+  }
+}

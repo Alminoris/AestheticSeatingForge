@@ -1,0 +1,24 @@
+{
+  "variants":
+  {
+    "facing=north,variant=normal": { "model": "aestheticseating:block/seating_log_mango" },
+    "facing=south,variant=normal": { "model": "aestheticseating:block/seating_log_mango", "y": 180 },
+    "facing=west,variant=normal": { "model": "aestheticseating:block/seating_log_mango", "y": 270 },
+    "facing=east,variant=normal": { "model": "aestheticseating:block/seating_log_mango", "y": 90 },
+
+    "facing=north,variant=center": { "model": "aestheticseating:block/seating_log_mango_center" },
+    "facing=south,variant=center": { "model": "aestheticseating:block/seating_log_mango_center", "y": 180 },
+    "facing=west,variant=center": { "model": "aestheticseating:block/seating_log_mango_center", "y": 270 },
+    "facing=east,variant=center": { "model": "aestheticseating:block/seating_log_mango_center", "y": 90 },
+
+    "facing=north,variant=left": { "model": "aestheticseating:block/seating_log_mango_left" },
+    "facing=south,variant=left": { "model": "aestheticseating:block/seating_log_mango_left", "y": 180 },
+    "facing=west,variant=left": { "model": "aestheticseating:block/seating_log_mango_left", "y": 270 },
+    "facing=east,variant=left": { "model": "aestheticseating:block/seating_log_mango_left", "y": 90 },
+
+    "facing=north,variant=right": { "model": "aestheticseating:block/seating_log_mango_right" },
+    "facing=south,variant=right": { "model": "aestheticseating:block/seating_log_mango_right", "y": 180 },
+    "facing=west,variant=right": { "model": "aestheticseating:block/seating_log_mango_right", "y": 270 },
+    "facing=east,variant=right": { "model": "aestheticseating:block/seating_log_mango_right", "y": 90 }
+  }
+}

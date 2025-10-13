@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "natures_spirit:maple_nss_slab"
+    },
+    "/": {
+      "item": "natures_spirit:maple_nss_log"
+    }
+  },
+  "pattern": [
+    "##",
+    "//"
+    
+  ],
+  "result": {
+    "count": 1,
+    "id": "aestheticseating:simple_bench_maple_nss"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "decorations",
+  "key": {
+    "#": {
+      "item": "arborealnature:bauhinia_slab"
+    },
+    "/": {
+      "item": "arborealnature:bauhinia_log"
+    }
+  },
+  "pattern": [
+    "###",
+    "/ /"
+  ],
+  "result": {
+    "count": 1,
+    "id": "aestheticseating:simple_stool_bauhinia"
+  }
+}

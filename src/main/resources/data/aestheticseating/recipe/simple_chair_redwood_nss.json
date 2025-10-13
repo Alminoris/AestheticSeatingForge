@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "natures_spirit:redwood_nss_slab"
+    },
+    "/": {
+      "item": "natures_spirit:redwood_nss_log"
+    }
+  },
+  "pattern": [
+    "###",
+    "/ /"
+    
+  ],
+  "result": {
+    "count": 1,
+    "id": "aestheticseating:simple_chair_redwood_nss"
+  }
+}

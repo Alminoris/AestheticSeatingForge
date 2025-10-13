@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "arborealnature:hazelnut_log"
+    },
+    "/": {
+      "item": "arborealnature:hazelnut_log"
+    }
+  },
+  "pattern": [
+    "#/"
+    
+    
+  ],
+  "result": {
+    "count": 1,
+    "id": "aestheticseating:seating_log_hazelnut"
+  }
+}

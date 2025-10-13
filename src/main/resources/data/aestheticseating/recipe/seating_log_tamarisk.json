@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "wildfields:tamarisk_log"
+    },
+    "/": {
+      "item": "wildfields:tamarisk_log"
+    }
+  },
+  "pattern": [
+    "#/"
+    
+    
+  ],
+  "result": {
+    "count": 1,
+    "id": "aestheticseating:seating_log_tamarisk"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "arborealnature:white_mulberry_slab"
+    },
+    "/": {
+      "item": "arborealnature:white_mulberry_log"
+    }
+  },
+  "pattern": [
+    "###",
+    "/ /"
+    
+  ],
+  "result": {
+    "count": 1,
+    "id": "aestheticseating:simple_chair_white_mulberry"
+  }
+}

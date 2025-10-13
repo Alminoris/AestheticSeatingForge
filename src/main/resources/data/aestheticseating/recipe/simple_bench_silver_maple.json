@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "silverwoodtrees:silver_maple_slab"
+    },
+    "/": {
+      "item": "silverwoodtrees:silver_maple_log"
+    }
+  },
+  "pattern": [
+    "##",
+    "//"
+    
+  ],
+  "result": {
+    "count": 1,
+    "id": "aestheticseating:simple_bench_silver_maple"
+  }
+}

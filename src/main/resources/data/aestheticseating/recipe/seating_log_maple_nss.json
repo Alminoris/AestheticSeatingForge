@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "natures_spirit:maple_nss_log"
+    },
+    "/": {
+      "item": "natures_spirit:maple_nss_log"
+    }
+  },
+  "pattern": [
+    "#/"
+    
+    
+  ],
+  "result": {
+    "count": 1,
+    "id": "aestheticseating:seating_log_maple_nss"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "variants":
+  {
+    "facing=north,transformed=false,variant=0": { "model": "aestheticseating:block/settee_brown_0" },
+    "facing=south,transformed=false,variant=0": { "model": "aestheticseating:block/settee_brown_0", "y": 180 },
+    "facing=west,transformed=false,variant=0": { "model": "aestheticseating:block/settee_brown_0", "y": 270 },
+    "facing=east,transformed=false,variant=0": { "model": "aestheticseating:block/settee_brown_0", "y": 90 },
+    "facing=north,transformed=true,variant=0": { "model": "aestheticseating:block/settee_brown_transformed_0" },
+    "facing=south,transformed=true,variant=0": { "model": "aestheticseating:block/settee_brown_transformed_0", "y": 180 },
+    "facing=west,transformed=true,variant=0": { "model": "aestheticseating:block/settee_brown_transformed_0", "y": 270 },
+    "facing=east,transformed=true,variant=0": { "model": "aestheticseating:block/settee_brown_transformed_0", "y": 90 },
+    "facing=north,transformed=false,variant=1": { "model": "aestheticseating:block/settee_brown_1" },
+    "facing=south,transformed=false,variant=1": { "model": "aestheticseating:block/settee_brown_1", "y": 180 },
+    "facing=west,transformed=false,variant=1": { "model": "aestheticseating:block/settee_brown_1", "y": 270 },
+    "facing=east,transformed=false,variant=1": { "model": "aestheticseating:block/settee_brown_1", "y": 90 },
+    "facing=north,transformed=true,variant=1": { "model": "aestheticseating:block/settee_brown_transformed_1" },
+    "facing=south,transformed=true,variant=1": { "model": "aestheticseating:block/settee_brown_transformed_1", "y": 180 },
+    "facing=west,transformed=true,variant=1": { "model": "aestheticseating:block/settee_brown_transformed_1", "y": 270 },
+    "facing=east,transformed=true,variant=1": { "model": "aestheticseating:block/settee_brown_transformed_1", "y": 90 },
+    "facing=north,transformed=false,variant=2": { "model": "aestheticseating:block/settee_brown_2" },
+    "facing=south,transformed=false,variant=2": { "model": "aestheticseating:block/settee_brown_2", "y": 180 },
+    "facing=west,transformed=false,variant=2": { "model": "aestheticseating:block/settee_brown_2", "y": 270 },
+    "facing=east,transformed=false,variant=2": { "model": "aestheticseating:block/settee_brown_2", "y": 90 },
+    "facing=north,transformed=true,variant=2": { "model": "aestheticseating:block/settee_brown_transformed_2" },
+    "facing=south,transformed=true,variant=2": { "model": "aestheticseating:block/settee_brown_transformed_2", "y": 180 },
+    "facing=west,transformed=true,variant=2": { "model": "aestheticseating:block/settee_brown_transformed_2", "y": 270 },
+    "facing=east,transformed=true,variant=2": { "model": "aestheticseating:block/settee_brown_transformed_2", "y": 90 }
+  }
+}
