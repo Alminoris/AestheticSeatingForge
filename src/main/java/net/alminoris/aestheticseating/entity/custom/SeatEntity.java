@@ -32,7 +32,7 @@ public class SeatEntity extends Entity {
 
         this.setDeltaMovement(0, 0, 0);
 
-        if (!level().isClientSide) {
+        if (!getLevel().isClientSide) {
             if (getPassengers().isEmpty()) {
                 cleanupTimer++;
                 if (cleanupTimer >= CLEANUP_DELAY) {
@@ -89,7 +89,7 @@ public class SeatEntity extends Entity {
     }
 
     @Override
-    protected void positionRider(Entity passenger, MoveFunction moveFunction)
+    public void positionRider(Entity passenger)
     {
         passenger.setPos(this.getX(), this.getY() + 0.2, this.getZ());
     }

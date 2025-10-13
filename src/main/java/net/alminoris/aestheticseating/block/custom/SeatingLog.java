@@ -143,6 +143,6 @@ public class SeatingLog extends SeatingFurniture
         if (state.getBlock() instanceof SeatingLog && state.getValue(FACING) == facing)
             return true;
 
-        return state.isSolid() && state.canOcclude();
+        return state.isSolidRender(world, pos) && state.canOcclude();
     }
 }
