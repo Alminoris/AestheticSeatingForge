@@ -8,7 +8,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -77,7 +77,7 @@ public class SimpleChair extends SeatingFurniture
     public static final BooleanProperty RECLINED = BooleanProperty.create("reclined");
 
     public SimpleChair() {
-        super(Properties.ofFullCopy(Blocks.OAK_PLANKS), -0.35D);
+        super(Properties.copy(Blocks.OAK_PLANKS), -0.35D);
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
                 .setValue(RECLINED, false)
@@ -96,9 +96,10 @@ public class SimpleChair extends SeatingFurniture
     }
 
     @Override
-    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos,
+    public InteractionResult use(BlockState state, Level level, BlockPos pos,
                                            Player player, InteractionHand hand, BlockHitResult hit)
     {
+        ItemStack stack = player.getItemInHand(hand);
         boolean currentReclined = state.getValue(RECLINED);
         boolean currentCarpeted = state.getValue(CARPETED);
 
@@ -116,7 +117,7 @@ public class SimpleChair extends SeatingFurniture
 
                 stack.shrink(1);
             }
-            return ItemInteractionResult.SUCCESS;
+            return InteractionResult.SUCCESS;
         }
 
         // Recline using wrench
@@ -124,9 +125,9 @@ public class SimpleChair extends SeatingFurniture
         {
             if (!level.isClientSide) {
                 level.setBlock(pos, state.setValue(RECLINED, !currentReclined), 3);
-                stack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
+                stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(InteractionHand.MAIN_HAND));
             }
-            return ItemInteractionResult.SUCCESS;
+            return InteractionResult.SUCCESS;
         }
 
         // Remove cushion
@@ -141,7 +142,7 @@ public class SimpleChair extends SeatingFurniture
                         .setValue(CARPETED, false)
                         .setValue(CARPET_COLOR, carpetColor), 3);
 
-                stack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
+                stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(InteractionHand.MAIN_HAND));
 
                 Item carpetItem = net.minecraft.core.registries.BuiltInRegistries.ITEM
                         .get(ResourceLocation.fromNamespaceAndPath("minecraft", carpetColor.getSerializedName() + "_carpet"));
@@ -150,10 +151,10 @@ public class SimpleChair extends SeatingFurniture
                 if (!player.getInventory().add(carpetStack))
                     player.drop(carpetStack, false);
             }
-            return ItemInteractionResult.SUCCESS;
+            return InteractionResult.SUCCESS;
         }
 
-        return super.useItemOn(stack, state, level, pos, player, hand, hit);
+        return super.use(state, level, pos, player, hand, hit);
     }
 
     @Override

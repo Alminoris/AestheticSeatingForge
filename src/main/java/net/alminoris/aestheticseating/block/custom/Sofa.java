@@ -8,7 +8,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -64,7 +63,7 @@ public class Sofa extends SeatingFurniture
 
     public Sofa(String name)
     {
-        super(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_WOOL), -0.4D);
+        super(BlockBehaviour.Properties.copy(Blocks.BLACK_WOOL), -0.4D);
         this.name = name;
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
@@ -105,8 +104,9 @@ public class Sofa extends SeatingFurniture
     }
 
     @Override
-    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit)
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit)
     {
+        ItemStack stack = player.getItemInHand(hand);
         boolean currentCushion = state.getValue(CUSHION);
         Variant currentVariant = state.getValue(VARIANT);
         Direction currentFacing = state.getValue(FACING);
@@ -123,7 +123,7 @@ public class Sofa extends SeatingFurniture
 
                 stack.shrink(1);
             }
-            return ItemInteractionResult.SUCCESS;
+            return InteractionResult.SUCCESS;
         }
 
         // Remove cushion
@@ -137,7 +137,7 @@ public class Sofa extends SeatingFurniture
                         .setValue(VARIANT, currentVariant), 3);
 
                 if (stack.isDamageableItem())
-                    stack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
+                    stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(InteractionHand.MAIN_HAND));
                 else
                     stack.shrink(1);
 
@@ -145,10 +145,10 @@ public class Sofa extends SeatingFurniture
                 if (!player.getInventory().add(carpetStack))
                     player.drop(carpetStack, false);
             }
-            return ItemInteractionResult.SUCCESS;
+            return InteractionResult.SUCCESS;
         }
 
-        return super.useItemOn(stack, state, level, pos, player, hand, hit);
+        return super.use(state, level, pos, player, hand, hit);
     }
 
     @Override

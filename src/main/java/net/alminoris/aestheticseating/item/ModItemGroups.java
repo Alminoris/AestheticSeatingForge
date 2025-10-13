@@ -68,7 +68,7 @@ public class ModItemGroups
                         entries.accept(ModBlocks.SEATING_LOGS.get(name).get());
                     }
                 }
-                if (ModList.get().isLoaded("wildfields"))
+                if (ModList.get().isLoaded("aestheticseating"))
                 {
                     for(String name : WF_WOOD_NAMES)
                     {

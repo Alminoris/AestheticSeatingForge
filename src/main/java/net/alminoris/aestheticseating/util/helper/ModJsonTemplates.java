@@ -8753,7 +8753,7 @@ public class ModJsonTemplates
               ],
               "result": {
                 "count": COUNT,
-                "id": "aestheticseating:OUTPUT_NAME"
+                "item": "aestheticseating:OUTPUT_NAME"
               }
             }
             """;

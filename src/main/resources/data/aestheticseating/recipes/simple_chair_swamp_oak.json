@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "missingtrees:swamp_oak_slab"
+    },
+    "/": {
+      "item": "missingtrees:swamp_oak_log"
+    }
+  },
+  "pattern": [
+    "###",
+    "/ /"
+    
+  ],
+  "result": {
+    "count": 1,
+    "item": "aestheticseating:simple_chair_swamp_oak"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:smooth_stone"
+    },
+    "/": {
+      "item": "wildfields:loessic_marl_block"
+    }
+  },
+  "pattern": [
+    "##",
+    "//"
+    
+  ],
+  "result": {
+    "count": 1,
+    "item": "aestheticseating:stone_bench_loessic_marl_block"
+  }
+}

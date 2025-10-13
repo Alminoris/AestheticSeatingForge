@@ -8,7 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -45,7 +45,7 @@ public class Settee extends SeatingFurniture
 
     public Settee(String name)
     {
-        super(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_WOOL), -0.6D);
+        super(BlockBehaviour.Properties.copy(Blocks.BLACK_WOOL), -0.6D);
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, net.minecraft.core.Direction.NORTH)
                 .setValue(TRANSFORMED, false)
@@ -66,8 +66,9 @@ public class Settee extends SeatingFurniture
     }
 
     @Override
-    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit)
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit)
     {
+        ItemStack stack = player.getItemInHand(hand);
         boolean currentTransformed = state.getValue(TRANSFORMED);
         int currentVariant = state.getValue(VARIANT);
         net.minecraft.core.Direction currentFacing = state.getValue(FACING);
@@ -84,11 +85,11 @@ public class Settee extends SeatingFurniture
 
                 if (stack.isDamageableItem())
                 {
-                    stack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
+                    stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(InteractionHand.MAIN_HAND));
                 }
             }
 
-            return ItemInteractionResult.SUCCESS;
+            return InteractionResult.SUCCESS;
         }
 
         // Adding cushion
@@ -104,7 +105,7 @@ public class Settee extends SeatingFurniture
                 stack.shrink(1);
             }
 
-            return ItemInteractionResult.SUCCESS;
+            return InteractionResult.SUCCESS;
         }
 
         // Removing cushion
@@ -119,7 +120,7 @@ public class Settee extends SeatingFurniture
 
                 if (stack.isDamageableItem())
                 {
-                    stack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
+                    stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(InteractionHand.MAIN_HAND));
                 }
 
                 ItemStack carpetStack = new ItemStack(ModBlocks.CUSHIONS.get(name).get().asItem());
@@ -127,10 +128,10 @@ public class Settee extends SeatingFurniture
                     player.drop(carpetStack, false);
             }
 
-            return ItemInteractionResult.SUCCESS;
+            return InteractionResult.SUCCESS;
         }
 
-        return super.useItemOn(stack, state, level, pos, player, hand, hit);
+        return super.use(state, level, pos, player, hand, hit);
     }
 
     @Override

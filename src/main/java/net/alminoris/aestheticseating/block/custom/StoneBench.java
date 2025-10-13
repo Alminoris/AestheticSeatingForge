@@ -8,7 +8,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -62,7 +62,7 @@ public class StoneBench extends SeatingFurniture
 
     public StoneBench()
     {
-        super(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE), -0.35D);
+        super(BlockBehaviour.Properties.copy(Blocks.STONE), -0.35D);
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
                 .setValue(VARIANT, Variant.NORMAL));

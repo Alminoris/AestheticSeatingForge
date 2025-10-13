@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "natures_spirit:cedar_nss_slab"
+    },
+    "/": {
+      "item": "natures_spirit:cedar_nss_log"
+    }
+  },
+  "pattern": [
+    "###",
+    "/ /"
+    
+  ],
+  "result": {
+    "count": 1,
+    "item": "aestheticseating:simple_chair_cedar_nss"
+  }
+}

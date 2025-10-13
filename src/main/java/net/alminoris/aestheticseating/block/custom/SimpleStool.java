@@ -105,7 +105,7 @@ public class SimpleStool extends SeatingFurniture
     private final String name;
 
     public SimpleStool(String name) {
-        super(Properties.ofFullCopy(Blocks.OAK_PLANKS), -0.35D);
+        super(Properties.copy(Blocks.OAK_PLANKS), -0.35D);
         this.name = name;
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
@@ -125,8 +125,8 @@ public class SimpleStool extends SeatingFurniture
     }
 
     @Override
-    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
-                                 Player player, BlockHitResult hit) {
+    public InteractionResult use(BlockState state, Level level, BlockPos pos,
+                                 Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack stack = player.getItemInHand(InteractionHand.MAIN_HAND);
         Form currentForm = state.getValue(FORM);
         boolean currentCarpeted = state.getValue(CARPETED);
@@ -154,7 +154,7 @@ public class SimpleStool extends SeatingFurniture
             if (!level.isClientSide) {
                 if (currentForm == Form.DESK || currentForm == Form.LATTICEBACK) {
                     currentForm = Form.NORMAL;
-                    stack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
+                    stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(InteractionHand.MAIN_HAND));
 
                     Direction facing = state.getValue(FACING);
                     CarpetColor carpetColor = state.getValue(CARPET_COLOR);
@@ -183,7 +183,7 @@ public class SimpleStool extends SeatingFurniture
                         if (split.length == 2 && this.name.equals(split[0])) {
                             currentForm = Form.fromString(split[1]);
                             player.getOffhandItem().shrink(1);
-                            stack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
+                            stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(InteractionHand.MAIN_HAND));
 
                             Direction facing = state.getValue(FACING);
                             CarpetColor carpetColor = state.getValue(CARPET_COLOR);
@@ -211,7 +211,7 @@ public class SimpleStool extends SeatingFurniture
                         .setValue(CARPETED, false)
                         .setValue(CARPET_COLOR, carpetColor), 3);
 
-                stack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
+                stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(InteractionHand.MAIN_HAND));
 
                 Item carpetItem = net.minecraft.core.registries.BuiltInRegistries.ITEM
                         .get(ResourceLocation.fromNamespaceAndPath("minecraft", colorName + "_carpet"));
@@ -223,7 +223,7 @@ public class SimpleStool extends SeatingFurniture
             return InteractionResult.SUCCESS;
         }
 
-        return super.useWithoutItem(state, level, pos, player, hit);
+        return super.use(state, level, pos, player, hand, hit);
     }
 
     private String checkForWrenching(String name) {

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "missingtrees:azalea_log"
+    },
+    "/": {
+      "item": "missingtrees:azalea_log"
+    }
+  },
+  "pattern": [
+    "#/"
+    
+    
+  ],
+  "result": {
+    "count": 1,
+    "item": "aestheticseating:seating_log_azalea"
+  }
+}

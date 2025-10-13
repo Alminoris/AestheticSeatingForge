@@ -15,11 +15,11 @@ public class Cushion extends SeatingFurniture
 
     public Cushion()
     {
-        super(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_WOOL), -0.6D);
+        super(BlockBehaviour.Properties.copy(Blocks.BLACK_WOOL), -0.6D);
     }
 
     @Override
-    protected VoxelShape getShape(BlockState state, BlockGetter getter, BlockPos pos, CollisionContext context)
+    public VoxelShape getShape(BlockState state, BlockGetter getter, BlockPos pos, CollisionContext context)
     {
         return SEAT;
     }

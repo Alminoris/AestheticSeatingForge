@@ -4,8 +4,6 @@ import net.alminoris.aestheticseating.block.ModBlocks;
 import net.alminoris.aestheticseating.item.ModItems;
 import net.alminoris.aestheticseating.util.helper.BlockSetsHelper;
 import net.alminoris.aestheticseating.util.helper.ModJsonHelper;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
@@ -16,17 +14,17 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import java.util.concurrent.CompletableFuture;
+import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder
 {
-    public ModRecipeProvider(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pRegistries)
+    public ModRecipeProvider(PackOutput pOutput)
     {
-        super(pOutput, pRegistries);
+        super(pOutput);
     }
 
     @Override
-    protected void buildRecipes(RecipeOutput recipeOutput)
+    protected void buildRecipes(Consumer<FinishedRecipe> recipeOutput)
     {
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModItems.CUSHION_REMOVER.get(), 1)
                 .pattern(" ##")
@@ -93,7 +91,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         for(String name : BlockSetsHelper.EXTRA_STONES_WF)
         {
-            registerStoneBench(name, "wildfields");
+            registerStoneBench(name, "aestheticseating");
         }
 
         for(String name : BlockSetsHelper.AN_WOOD_NAMES)
@@ -106,10 +104,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         for(String name : BlockSetsHelper.WF_WOOD_NAMES)
         {
-            registerSimpleChair(name, "wildfields");
-            registerSimpleStool(name, "wildfields");
-            registerSimpleBench(name, "wildfields");
-            registerSeatingLog(name, "wildfields");
+            registerSimpleChair(name, "aestheticseating");
+            registerSimpleStool(name, "aestheticseating");
+            registerSimpleBench(name, "aestheticseating");
+            registerSeatingLog(name, "aestheticseating");
         }
 
         for(String name : BlockSetsHelper.ST_WOOD_NAMES)
@@ -145,7 +143,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
     }
 
-    private static void registerSimpleChair(RecipeOutput recipeOutput, Block block, Block slab, Block log)
+    private static void registerSimpleChair(Consumer<FinishedRecipe> recipeOutput, Block block, Block slab, Block log)
     {
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, block, 1)
                 .pattern("#  ")
@@ -158,7 +156,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
     }
 
-    private static void registerSimpleBench(RecipeOutput recipeOutput, Block block, Block slab, Block log)
+    private static void registerSimpleBench(Consumer<FinishedRecipe> recipeOutput, Block block, Block slab, Block log)
     {
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, block, 1)
                 .pattern("##")
@@ -170,7 +168,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
     }
 
-    private static void registerSeatingLog(RecipeOutput recipeOutput, Block block, Block log)
+    private static void registerSeatingLog(Consumer<FinishedRecipe> recipeOutput, Block block, Block log)
     {
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, block, 1)
                 .pattern("##")
@@ -218,7 +216,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 "\"###\",", "\"/ /\"", "");
     }
 
-    private static void registerSimpleStool(RecipeOutput recipeOutput, Block block, Block slab, Block log)
+    private static void registerSimpleStool(Consumer<FinishedRecipe> recipeOutput, Block block, Block slab, Block log)
     {
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, block, 1)
                 .pattern("###")
@@ -230,7 +228,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
     }
 
-    private static void registerSettee(RecipeOutput recipeOutput, Block block, Block wool)
+    private static void registerSettee(Consumer<FinishedRecipe> recipeOutput, Block block, Block wool)
     {
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, block, 1)
                 .pattern("# #")
@@ -240,7 +238,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
     }
 
-    private static void registerSofa(RecipeOutput recipeOutput, Block block, Block wool)
+    private static void registerSofa(Consumer<FinishedRecipe> recipeOutput, Block block, Block wool)
     {
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, block, 1)
                 .pattern("##")

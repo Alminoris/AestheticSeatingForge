@@ -8,7 +8,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -65,7 +65,7 @@ public class SimpleBench extends SeatingFurniture
 
     public SimpleBench(String name)
     {
-        super(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS), -0.35D);
+        super(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS), -0.35D);
         this.name = name;
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
@@ -100,8 +100,9 @@ public class SimpleBench extends SeatingFurniture
     }
 
     @Override
-    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit)
+    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit)
     {
+        ItemStack stack = player.getItemInHand(hand);
         Variant currentVariant = state.getValue(VARIANT);
         boolean currentBackrest = state.getValue(BACKREST);
 
@@ -120,7 +121,7 @@ public class SimpleBench extends SeatingFurniture
                             .setValue(BACKREST, currentBackrest), 3);
                 }
             }
-            return ItemInteractionResult.sidedSuccess(world.isClientSide);
+            return InteractionResult.sidedSuccess(world.isClientSide);
         }
 
         // Add backrest with wrench + matching offhand item
@@ -141,10 +142,10 @@ public class SimpleBench extends SeatingFurniture
                             .setValue(BACKREST, currentBackrest), 3);
                 }
             }
-            return ItemInteractionResult.sidedSuccess(world.isClientSide);
+            return InteractionResult.sidedSuccess(world.isClientSide);
         }
 
-        return super.useItemOn(stack, state, world, pos, player, hand, hit);
+        return super.use(state, world, pos, player, hand, hit);
     }
 
     private boolean isWrench(ItemStack stack)
