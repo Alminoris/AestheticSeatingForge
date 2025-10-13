@@ -8,6 +8,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -125,9 +126,9 @@ public class SimpleStool extends SeatingFurniture
     }
 
     @Override
-    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
-                                 Player player, BlockHitResult hit) {
-        ItemStack stack = player.getItemInHand(InteractionHand.MAIN_HAND);
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos,
+                                           Player player, InteractionHand hand, BlockHitResult hit)
+    {
         Form currentForm = state.getValue(FORM);
         boolean currentCarpeted = state.getValue(CARPETED);
 
@@ -146,7 +147,7 @@ public class SimpleStool extends SeatingFurniture
 
                 stack.shrink(1);
             }
-            return InteractionResult.SUCCESS;
+            return ItemInteractionResult.SUCCESS;
         }
 
         // Axe resets form to NORMAL
@@ -165,7 +166,7 @@ public class SimpleStool extends SeatingFurniture
                             .setValue(CARPET_COLOR, carpetColor), 3);
                 }
             }
-            return InteractionResult.SUCCESS;
+            return ItemInteractionResult.SUCCESS;
         }
 
         // Wrench transformation based on held block in offhand
@@ -196,7 +197,7 @@ public class SimpleStool extends SeatingFurniture
                     }
                 }
             }
-            return InteractionResult.SUCCESS;
+            return ItemInteractionResult.SUCCESS;
         }
 
         // Cushion remover
@@ -220,10 +221,10 @@ public class SimpleStool extends SeatingFurniture
                     player.drop(carpetStack, false);
                 }
             }
-            return InteractionResult.SUCCESS;
+            return ItemInteractionResult.SUCCESS;
         }
 
-        return super.useWithoutItem(state, level, pos, player, hit);
+        return super.useItemOn(stack, state, level, pos, player, hand, hit);
     }
 
     private String checkForWrenching(String name) {
