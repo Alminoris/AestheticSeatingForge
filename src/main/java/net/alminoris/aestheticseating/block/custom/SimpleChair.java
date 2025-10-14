@@ -77,7 +77,7 @@ public class SimpleChair extends SeatingFurniture
     public static final BooleanProperty RECLINED = BooleanProperty.create("reclined");
 
     public SimpleChair() {
-        super(Properties.copy(Blocks.OAK_PLANKS), -0.35D);
+        super(Properties.copy(Blocks.OAK_PLANKS), -0.30D);
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
                 .setValue(RECLINED, false)

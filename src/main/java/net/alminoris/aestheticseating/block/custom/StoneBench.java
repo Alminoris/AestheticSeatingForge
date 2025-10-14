@@ -62,7 +62,7 @@ public class StoneBench extends SeatingFurniture
 
     public StoneBench()
     {
-        super(BlockBehaviour.Properties.copy(Blocks.STONE), -0.35D);
+        super(BlockBehaviour.Properties.copy(Blocks.STONE), -0.30D);
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
                 .setValue(VARIANT, Variant.NORMAL));

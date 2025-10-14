@@ -63,7 +63,7 @@ public class Sofa extends SeatingFurniture
 
     public Sofa(String name)
     {
-        super(BlockBehaviour.Properties.copy(Blocks.BLACK_WOOL), -0.4D);
+        super(BlockBehaviour.Properties.copy(Blocks.BLACK_WOOL), -0.35D);
         this.name = name;
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)

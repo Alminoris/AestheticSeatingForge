@@ -52,7 +52,7 @@ public class SeatingLog extends SeatingFurniture
 
     public SeatingLog()
     {
-        super(BlockBehaviour.Properties.copy(Blocks.STONE), -0.5D);
+        super(BlockBehaviour.Properties.copy(Blocks.STONE), -0.45D);
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
                 .setValue(VARIANT, Variant.NORMAL));
