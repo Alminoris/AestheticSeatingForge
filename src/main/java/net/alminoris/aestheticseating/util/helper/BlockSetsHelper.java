@@ -18,7 +18,7 @@ public class BlockSetsHelper
 
     public static final String[] EXTRA_STONES_WF =
             {
-                    "dolomite_block", "saltmarsh_block", "loessic_marl_block", "loamy_marl_block", "fossil_marlstone_block"
+                    "dolomite_block", "saltmarsh_block", "loessic_marl_block", "loamy_marl_block", "fossil_marlstone_block", "limestone_block"
             };
 
     public static final String[] WOODS =
