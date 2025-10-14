@@ -75,7 +75,7 @@
   "block.aestheticseating.simple_stool_wild_cherry": "Taburete de cerezo silvestre",
   "item.aestheticseating.cushion_remover": "Quitacojines",
   "item.aestheticseating.wrench": "Llave inglesa",
-  "itemgroup.aseattab": "Aesthetic Seating",
+  "itemGroup.aestheticseating.aseattab": "Aesthetic Seating",
   "block.aestheticseating.simple_bench_acacia": "Banco de acacia",
   "block.aestheticseating.simple_bench_bamboo": "Banco de bambú",
   "block.aestheticseating.simple_bench_bauhinia": "Banco de bauhinia",

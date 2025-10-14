@@ -3,6 +3,7 @@ package net.alminoris.aestheticseating.block.custom;
 import net.alminoris.aestheticseating.item.ModItems;
 import net.alminoris.aestheticseating.util.helper.VoxelShapeHelper;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.util.StringRepresentable;
@@ -27,6 +28,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.core.Direction;
+import net.minecraftforge.common.Tags;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -150,7 +152,7 @@ public class SimpleStool extends SeatingFurniture
         }
 
         // Axe resets form to NORMAL
-        if (stack.is(ItemTags.AXES)) {
+        if (stack.is(Tags.Items.TOOLS_AXES)) {
             if (!level.isClientSide) {
                 if (currentForm == Form.DESK || currentForm == Form.LATTICEBACK) {
                     currentForm = Form.NORMAL;
@@ -174,7 +176,7 @@ public class SimpleStool extends SeatingFurniture
                 Item offhandItem = player.getOffhandItem().getItem();
                 Block block = Block.byItem(offhandItem);
                 if (block != Blocks.AIR) {
-                    ResourceLocation id = net.minecraft.core.registries.BuiltInRegistries.BLOCK.getKey(block);
+                    ResourceLocation id = Registry.BLOCK.getKey(block);
                     String path = id.getPath();
                     String result = checkForWrenching(path);
 
@@ -213,7 +215,7 @@ public class SimpleStool extends SeatingFurniture
 
                 stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(InteractionHand.MAIN_HAND));
 
-                Item carpetItem = net.minecraft.core.registries.BuiltInRegistries.ITEM
+                Item carpetItem = Registry.ITEM
                         .get(ResourceLocation.fromNamespaceAndPath("minecraft", colorName + "_carpet"));
                 ItemStack carpetStack = new ItemStack(carpetItem);
                 if (!player.getInventory().add(carpetStack)) {

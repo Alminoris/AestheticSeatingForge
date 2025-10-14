@@ -2,10 +2,11 @@ package net.alminoris.aestheticseating.datagen;
 
 import net.alminoris.aestheticseating.AestheticSeating;
 import net.alminoris.aestheticseating.block.ModBlocks;
+import net.alminoris.aestheticseating.item.ModItemGroups;
 import net.alminoris.aestheticseating.util.helper.BlockSetsHelper;
 import net.alminoris.aestheticseating.util.helper.ModJsonHelper;
 import net.alminoris.aestheticseating.util.helper.ModJsonTemplates;
-import net.minecraft.data.PackOutput;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -17,9 +18,9 @@ import java.util.Enumeration;
 
 public class ModBlockStateProvider extends BlockStateProvider
 {
-    public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper)
+    public ModBlockStateProvider(DataGenerator dataGenerator, ExistingFileHelper exFileHelper)
     {
-        super(output, AestheticSeating.MOD_ID, exFileHelper);
+        super(dataGenerator, AestheticSeating.MOD_ID, exFileHelper);
     }
 
     @Override
@@ -44,7 +45,7 @@ public class ModBlockStateProvider extends BlockStateProvider
             blockItem(ModBlocks.SEATING_LOGS.get(woodName), "block/seating_log_"+woodName);
         }
 
-        for(String woodName : BlockSetsHelper.AN_WOOD_NAMES)
+        for(String woodName : ModItemGroups.AN_WOOD_NAMES)
         {
             for(String name : BlockSetsHelper.COLORS)
             {
@@ -63,7 +64,7 @@ public class ModBlockStateProvider extends BlockStateProvider
             blockItem(ModBlocks.SEATING_LOGS.get(woodName), "block/seating_log_"+woodName);
         }
 
-        for(String woodName : BlockSetsHelper.WF_WOOD_NAMES)
+        for(String woodName : ModItemGroups.WF_WOOD_NAMES)
         {
             for(String name : BlockSetsHelper.COLORS)
             {
@@ -82,7 +83,7 @@ public class ModBlockStateProvider extends BlockStateProvider
             blockItem(ModBlocks.SEATING_LOGS.get(woodName), "block/seating_log_"+woodName);
         }
 
-        for(String woodName : BlockSetsHelper.ST_WOOD_NAMES)
+        for(String woodName : ModItemGroups.ST_WOOD_NAMES)
         {
             for(String name : BlockSetsHelper.COLORS)
             {
@@ -101,7 +102,7 @@ public class ModBlockStateProvider extends BlockStateProvider
             blockItem(ModBlocks.SEATING_LOGS.get(woodName), "block/seating_log_"+woodName);
         }
 
-        for(String woodName : BlockSetsHelper.WT_WOOD_NAMES)
+        for(String woodName : ModItemGroups.WT_WOOD_NAMES)
         {
             for(String name : BlockSetsHelper.COLORS)
             {
@@ -120,7 +121,7 @@ public class ModBlockStateProvider extends BlockStateProvider
             blockItem(ModBlocks.SEATING_LOGS.get(woodName), "block/seating_log_"+woodName);
         }
 
-        for(String woodName : BlockSetsHelper.MT_WOOD_NAMES)
+        for(String woodName : ModItemGroups.MT_WOOD_NAMES)
         {
             for(String name : BlockSetsHelper.COLORS)
             {
@@ -139,7 +140,7 @@ public class ModBlockStateProvider extends BlockStateProvider
             blockItem(ModBlocks.SEATING_LOGS.get(woodName), "block/seating_log_"+woodName);
         }
 
-        for(String woodName : BlockSetsHelper.NSS_WOOD_NAMES)
+        for(String woodName : ModItemGroups.NSS_WOOD_NAMES)
         {
             for(String name : BlockSetsHelper.COLORS)
             {
@@ -165,7 +166,7 @@ public class ModBlockStateProvider extends BlockStateProvider
             blockItem(ModBlocks.STONE_BENCHES.get(name), "block/stone_bench_"+name);
         }
 
-        for(String name : BlockSetsHelper.EXTRA_STONES_WF)
+        for(String name : ModItemGroups.EXTRA_STONES_WF)
         {
             registerStoneBench(name, "aestheticseating");
             ModJsonHelper.createStoneBenchBlockState(name);

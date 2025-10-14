@@ -3,6 +3,8 @@ package net.alminoris.aestheticseating.entity.custom;
 import net.alminoris.aestheticseating.util.SeatEntityPool;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientboundAddEntityPacket;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -80,6 +82,12 @@ public class SeatEntity extends Entity {
     public boolean ignoreExplosion()
     {
         return true;
+    }
+
+    @Override
+    public Packet<?> getAddEntityPacket()
+    {
+        return new ClientboundAddEntityPacket(this);
     }
 
     @Override

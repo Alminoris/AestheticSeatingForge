@@ -3,6 +3,8 @@ package net.alminoris.aestheticseating.block.custom;
 import net.alminoris.aestheticseating.item.ModItems;
 import net.alminoris.aestheticseating.util.helper.VoxelShapeHelper;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Registry;
+import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.util.StringRepresentable;
@@ -26,6 +28,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.core.Direction;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -144,7 +147,7 @@ public class SimpleChair extends SeatingFurniture
 
                 stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(InteractionHand.MAIN_HAND));
 
-                Item carpetItem = net.minecraft.core.registries.BuiltInRegistries.ITEM
+                Item carpetItem = Registry.ITEM
                         .get(ResourceLocation.fromNamespaceAndPath("minecraft", carpetColor.getSerializedName() + "_carpet"));
                 ItemStack carpetStack = new ItemStack(carpetItem);
 

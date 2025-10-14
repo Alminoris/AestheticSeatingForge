@@ -133,7 +133,7 @@
   "block.aestheticseating.stone_bench_saltmarsh_block": "Saltmarsh Stone Bench",
   "item.aestheticseating.cushion_remover": "Cushion Remover",
   "item.aestheticseating.wrench": "Wrench",
-  "itemgroup.aseattab": "Aesthetic Seating",
+  "itemGroup.aestheticseating.aseattab": "Aesthetic Seating",
   "block.aestheticseating.simple_stool_olive": "Olive Stool",
   "block.aestheticseating.simple_chair_olive": "Olive Chair",
   "block.aestheticseating.simple_bench_olive": "Olive Bench",

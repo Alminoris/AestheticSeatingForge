@@ -2,6 +2,7 @@ package net.alminoris.aestheticseating.block;
 
 import net.alminoris.aestheticseating.AestheticSeating;
 import net.alminoris.aestheticseating.block.custom.*;
+import net.alminoris.aestheticseating.item.ModItemGroups;
 import net.alminoris.aestheticseating.item.ModItems;
 import net.alminoris.aestheticseating.util.helper.BlockSetsHelper;
 import net.minecraft.world.item.BlockItem;
@@ -93,7 +94,7 @@ public class ModBlocks
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block)
     {
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(ModItemGroups.ASEAT_TAB)));
     }
 
     public static void register(IEventBus eventBus)

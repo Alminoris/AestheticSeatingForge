@@ -30,6 +30,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.ArrayList;
@@ -107,7 +108,7 @@ public class SimpleBench extends SeatingFurniture
         boolean currentBackrest = state.getValue(BACKREST);
 
         // Remove backrest with axe
-        if (stack.is(ItemTags.AXES))
+        if (stack.is(Tags.Items.TOOLS_AXES))
         {
             if (!world.isClientSide)
             {

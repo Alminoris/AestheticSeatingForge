@@ -2,23 +2,19 @@ package net.alminoris.aestheticseating.datagen.loot;
 
 import net.alminoris.aestheticseating.block.ModBlocks;
 import net.alminoris.aestheticseating.util.helper.BlockSetsHelper;
-import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.data.loot.BlockLoot;
+import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
 
-public class ModBlockLootTables extends BlockLootSubProvider
+public class ModBlockLootTables extends BlockLoot
 {
-    public ModBlockLootTables()
-    {
-        super(Set.of(), FeatureFlags.REGISTRY.allFlags());
-    }
-
     @Override
-    protected void generate()
+    protected void addTables()
     {
         for(String name : BlockSetsHelper.getWoods())
         {

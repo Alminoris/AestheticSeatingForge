@@ -12,8 +12,10 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, AestheticSeating.MOD_ID);
 
-    public static final RegistryObject<Item> CUSHION_REMOVER = registerItem("cushion_remover", () -> new TieredItem(Tiers.IRON, new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> WRENCH = registerItem("wrench", () -> new TieredItem(Tiers.IRON, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> CUSHION_REMOVER = registerItem("cushion_remover", () ->
+            new TieredItem(Tiers.IRON, new Item.Properties().stacksTo(1).tab(ModItemGroups.ASEAT_TAB)));
+    public static final RegistryObject<Item> WRENCH = registerItem("wrench", () -> new TieredItem(Tiers.IRON,
+            new Item.Properties().stacksTo(1).tab(ModItemGroups.ASEAT_TAB)));
 
     private static <T extends Item> RegistryObject<T> registerItem(String name, Supplier<T> item)
     {
