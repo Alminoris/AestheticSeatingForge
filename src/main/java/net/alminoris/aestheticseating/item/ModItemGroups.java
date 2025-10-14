@@ -3,6 +3,7 @@ package net.alminoris.aestheticseating.item;
 import net.alminoris.aestheticseating.AestheticSeating;
 import net.alminoris.aestheticseating.block.ModBlocks;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.fml.ModList;
@@ -36,7 +37,7 @@ public class ModItemGroups
 
         @Override
         public Component getDisplayName() {
-            return Component.translatable("itemGroup." + AestheticSeating.MOD_ID + ".aseattab");
+            return new TranslatableComponent("itemGroup." + AestheticSeating.MOD_ID + ".aseattab");
         }
     };
 

@@ -107,7 +107,7 @@ public class SimpleChair extends SeatingFurniture
         boolean currentCarpeted = state.getValue(CARPETED);
 
         // Add carpet
-        if (stack.is(ItemTags.WOOL_CARPETS) && !currentCarpeted)
+        if (stack.is(ItemTags.CARPETS) && !currentCarpeted)
         {
             if (!level.isClientSide) {
                 Direction facing = state.getValue(FACING);

@@ -15,13 +15,13 @@ public class BlockSetsHelper
     public static final String[] STONES =
             {
                     "stone", "tuff", "blackstone", "andesite", "diorite", "granite",  "deepslate", "basalt_side",
-                    "quartz_block_bottom", "stone_bricks", "bricks", "mud_bricks", "sandstone"
+                    "quartz_block_bottom", "stone_bricks", "bricks", "sandstone"
             };
 
     public static final String[] WOODS =
             {
                     "oak", "birch", "spruce", "jungle", "acacia", "dark_oak",
-                    "crimson", "warped", "mangrove"
+                    "crimson", "warped"
             };
 
     public static String[] getWoods()

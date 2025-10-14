@@ -9,6 +9,7 @@ import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -108,7 +109,7 @@ public class SimpleBench extends SeatingFurniture
         boolean currentBackrest = state.getValue(BACKREST);
 
         // Remove backrest with axe
-        if (stack.is(Tags.Items.TOOLS_AXES))
+        if (stack.getItem() instanceof AxeItem)
         {
             if (!world.isClientSide)
             {

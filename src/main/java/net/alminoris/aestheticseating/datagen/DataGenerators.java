@@ -3,9 +3,9 @@ package net.alminoris.aestheticseating.datagen;
 import net.alminoris.aestheticseating.AestheticSeating;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 @Mod.EventBusSubscriber(modid = AestheticSeating.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGenerators
@@ -16,10 +16,10 @@ public class DataGenerators
         DataGenerator generator = event.getGenerator();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
-        generator.addProvider(event.includeServer(), new ModLootTableProvider(generator));
-        generator.addProvider(event.includeServer(), new ModRecipeProvider(generator));
+        generator.addProvider(new ModLootTableProvider(generator));
+        generator.addProvider(new ModRecipeProvider(generator));
 
-        generator.addProvider(event.includeClient(), new ModBlockStateProvider(generator, existingFileHelper));
-        generator.addProvider(event.includeClient(), new ModItemModelProvider(generator, existingFileHelper));
+        generator.addProvider(new ModBlockStateProvider(generator, existingFileHelper));
+        generator.addProvider(new ModItemModelProvider(generator, existingFileHelper));
     }
 }

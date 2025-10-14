@@ -11,6 +11,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -134,7 +135,7 @@ public class SimpleStool extends SeatingFurniture
         boolean currentCarpeted = state.getValue(CARPETED);
 
         // Add carpet
-        if (stack.is(ItemTags.WOOL_CARPETS) && !currentCarpeted) {
+        if (stack.is(ItemTags.CARPETS) && !currentCarpeted) {
             if (!level.isClientSide) {
                 Direction facing = state.getValue(FACING);
                 String colorName = stack.getItem().getDescriptionId()
@@ -152,7 +153,7 @@ public class SimpleStool extends SeatingFurniture
         }
 
         // Axe resets form to NORMAL
-        if (stack.is(Tags.Items.TOOLS_AXES)) {
+        if (stack.getItem() instanceof AxeItem) {
             if (!level.isClientSide) {
                 if (currentForm == Form.DESK || currentForm == Form.LATTICEBACK) {
                     currentForm = Form.NORMAL;

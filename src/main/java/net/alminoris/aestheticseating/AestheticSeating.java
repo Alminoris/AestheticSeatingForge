@@ -27,9 +27,9 @@ public class AestheticSeating
     public static final String MOD_ID = "aestheticseating";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public AestheticSeating(FMLJavaModLoadingContext context)
+    public AestheticSeating()
     {
-        IEventBus modEventBus = context.getModEventBus();
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
 
@@ -42,8 +42,6 @@ public class AestheticSeating
         ModEntities.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
-
-        context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
