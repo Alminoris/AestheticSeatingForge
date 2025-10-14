@@ -65,7 +65,7 @@ public class SimpleBench extends SeatingFurniture
 
     public SimpleBench(String name)
     {
-        super(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS), -0.35D);
+        super(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS), -0.30D);
         this.name = name;
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)

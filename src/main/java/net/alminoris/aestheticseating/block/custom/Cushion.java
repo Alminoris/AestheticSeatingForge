@@ -15,7 +15,7 @@ public class Cushion extends SeatingFurniture
 
     public Cushion()
     {
-        super(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_WOOL), -0.6D);
+        super(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_WOOL), -0.55D);
     }
 
     @Override
