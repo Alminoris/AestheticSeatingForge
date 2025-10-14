@@ -18,7 +18,7 @@ public class BlockSetsHelper
 
     public static final String[] EXTRA_STONES_WF =
             {
-                    "dolomite_block", "saltmarsh_block", "loessic_marl_block", "loamy_marl_block", "fossil_marlstone_block"
+                    "dolomite_block", "saltmarsh_block", "loessic_marl_block", "loamy_marl_block", "fossil_marlstone_block", "limestone_block"
             };
 
     public static final String[] WOODS =
@@ -30,12 +30,13 @@ public class BlockSetsHelper
     public static final String[] AN_WOOD_NAMES =
             {
                     "hazelnut", "hornbeam", "hawthorn", "quince", "plum", "mango", "fig", "viburnum", "white_mulberry", "wild_cherry",
-                    "bauhinia", "pine", "fir", "cedar", "araucaria", "juniper"
+                    "bauhinia", "pine", "fir", "cedar", "araucaria", "juniper",
+                    "bald_cypress", "thuja", "sequoia", "mountain_hemlock", "cryptomeria", "yew", "larch"
             };
 
     public static final String[] WF_WOOD_NAMES =
             {
-                    "olive", "tamarisk", "western_serviceberry"
+                    "olive", "tamarisk", "western_serviceberry", "trembling_aspen", "cottonwood"
             };
 
     public static final String[] ST_WOOD_NAMES = new String[] { "walnut", "silver_maple", "staghorn_sumac", "silverberry" };
