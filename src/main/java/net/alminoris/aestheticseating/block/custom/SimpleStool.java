@@ -105,7 +105,7 @@ public class SimpleStool extends SeatingFurniture
     private final String name;
 
     public SimpleStool(String name) {
-        super(Properties.copy(Blocks.OAK_PLANKS), -0.35D);
+        super(Properties.copy(Blocks.OAK_PLANKS), -0.30D);
         this.name = name;
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)

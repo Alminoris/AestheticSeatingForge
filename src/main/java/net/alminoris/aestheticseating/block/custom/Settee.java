@@ -45,7 +45,7 @@ public class Settee extends SeatingFurniture
 
     public Settee(String name)
     {
-        super(BlockBehaviour.Properties.copy(Blocks.BLACK_WOOL), -0.6D);
+        super(BlockBehaviour.Properties.copy(Blocks.BLACK_WOOL), -0.55D);
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, net.minecraft.core.Direction.NORTH)
                 .setValue(TRANSFORMED, false)
