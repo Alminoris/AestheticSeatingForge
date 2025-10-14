@@ -33,6 +33,8 @@ public class AestheticSeating
 
         modEventBus.addListener(this::commonSetup);
 
+        ModItemGroups.registerModItemGroups();
+
         ModItems.register(modEventBus);
 
         ModBlocks.register(modEventBus);
