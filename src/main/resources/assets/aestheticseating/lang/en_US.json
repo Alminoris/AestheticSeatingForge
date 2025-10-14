@@ -69,7 +69,7 @@
   "block.aestheticseating.simple_bench_viburnum": "Viburnum Bench",
   "block.aestheticseating.simple_bench_warped": "Warped Bench",
   "block.aestheticseating.simple_bench_white_mulberry": "White Mulberry Bench",
-  "block.aestheticseating.simple_bench_wild_cherry": "Wild Cherry Stool",
+  "block.aestheticseating.simple_bench_wild_cherry": "Wild Cherry Bench",
   "block.aestheticseating.simple_chair_acacia": "Acacia Chair",
   "block.aestheticseating.simple_chair_bamboo": "Bamboo Chair",
   "block.aestheticseating.simple_chair_bauhinia": "Bauhinia Chair",
@@ -133,7 +133,7 @@
   "block.aestheticseating.stone_bench_saltmarsh_block": "Saltmarsh Stone Bench",
   "item.aestheticseating.cushion_remover": "Cushion Remover",
   "item.aestheticseating.wrench": "Wrench",
-  "itemGroup.aestheticseating.aseattab": "Aesthetic Seating",
+  "itemgroup.aseattab": "Aesthetic Seating",
   "block.aestheticseating.simple_stool_olive": "Olive Stool",
   "block.aestheticseating.simple_chair_olive": "Olive Chair",
   "block.aestheticseating.simple_bench_olive": "Olive Bench",
@@ -304,5 +304,51 @@
 
   "block.aestheticseating.stone_bench_loessic_marl_block": "Loessic Marl Stone Bench",
   "block.aestheticseating.stone_bench_loamy_marl_block": "Loamy Marl Stone Bench",
-  "block.aestheticseating.stone_bench_fossil_marlstone_block": "Fossil Marlstone Stone Bench"
+  "block.aestheticseating.stone_bench_fossil_marlstone_block": "Fossil Marlstone Stone Bench",
+  "block.aestheticseating.stone_bench_limestone_block": "Limestone Stone Bench",
+
+  "block.aestheticseating.simple_chair_bald_cypress": "Bald Cypress Simple Chair",
+  "block.aestheticseating.simple_stool_bald_cypress": "Bald Cypress Simple Stool",
+  "block.aestheticseating.simple_bench_bald_cypress": "Bald Cypress Simple Bench",
+  "block.aestheticseating.seating_log_bald_cypress": "Bald Cypress Seating Log",
+
+  "block.aestheticseating.simple_chair_thuja": "Thuja Simple Chair",
+  "block.aestheticseating.simple_stool_thuja": "Thuja Simple Stool",
+  "block.aestheticseating.simple_bench_thuja": "Thuja Simple Bench",
+  "block.aestheticseating.seating_log_thuja": "Thuja Seating Log",
+
+  "block.aestheticseating.simple_chair_sequoia": "Sequoia Simple Chair",
+  "block.aestheticseating.simple_stool_sequoia": "Sequoia Simple Stool",
+  "block.aestheticseating.simple_bench_sequoia": "Sequoia Simple Bench",
+  "block.aestheticseating.seating_log_sequoia": "Sequoia Seating Log",
+
+  "block.aestheticseating.simple_chair_mountain_hemlock": "Mountain Hemlock Simple Chair",
+  "block.aestheticseating.simple_stool_mountain_hemlock": "Mountain Hemlock Simple Stool",
+  "block.aestheticseating.simple_bench_mountain_hemlock": "Mountain Hemlock Simple Bench",
+  "block.aestheticseating.seating_log_mountain_hemlock": "Mountain Hemlock Seating Log",
+
+  "block.aestheticseating.simple_chair_cryptomeria": "Cryptomeria Simple Chair",
+  "block.aestheticseating.simple_stool_cryptomeria": "Cryptomeria Simple Stool",
+  "block.aestheticseating.simple_bench_cryptomeria": "Cryptomeria Simple Bench",
+  "block.aestheticseating.seating_log_cryptomeria": "Cryptomeria Seating Log",
+
+  "block.aestheticseating.simple_chair_yew": "Yew Simple Chair",
+  "block.aestheticseating.simple_stool_yew": "Yew Simple Stool",
+  "block.aestheticseating.simple_bench_yew": "Yew Simple Bench",
+  "block.aestheticseating.seating_log_yew": "Yew Seating Log",
+
+  "block.aestheticseating.simple_chair_larch": "Larch Simple Chair",
+  "block.aestheticseating.simple_stool_larch": "Larch Simple Stool",
+  "block.aestheticseating.simple_bench_larch": "Larch Simple Bench",
+  "block.aestheticseating.seating_log_larch": "Larch Seating Log",
+
+  "block.aestheticseating.simple_chair_trembling_aspen": "Trembling Aspen Simple Chair",
+  "block.aestheticseating.simple_stool_trembling_aspen": "Trembling Aspen Simple Stool",
+  "block.aestheticseating.simple_bench_trembling_aspen": "Trembling Aspen Simple Bench",
+  "block.aestheticseating.seating_log_trembling_aspen": "Trembling Aspen Seating Log",
+
+  "block.aestheticseating.simple_chair_cottonwood": "Cottonwood Simple Chair",
+  "block.aestheticseating.simple_stool_cottonwood": "Cottonwood Simple Stool",
+  "block.aestheticseating.simple_bench_cottonwood": "Cottonwood Simple Bench",
+  "block.aestheticseating.seating_log_cottonwood": "Cottonwood Seating Log"
 }
