@@ -7,6 +7,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -124,7 +125,8 @@ public class SimpleChair extends SeatingFurniture
         }
 
         // Recline using wrench
-        if (stack.is(ModItems.WRENCH.get()))
+        if (stack.is(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(),
+                ResourceLocation.fromNamespaceAndPath("aestheticseating", "wrench"))))
         {
             if (!level.isClientSide) {
                 level.setBlock(pos, state.setValue(RECLINED, !currentReclined), 3);
