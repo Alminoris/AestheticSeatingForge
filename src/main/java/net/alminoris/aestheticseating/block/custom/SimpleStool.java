@@ -5,6 +5,7 @@ import net.alminoris.aestheticseating.util.helper.VoxelShapeHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -27,6 +28,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.core.Direction;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -169,7 +171,8 @@ public class SimpleStool extends SeatingFurniture
         }
 
         // Wrench transformation based on held block in offhand
-        if (stack.is(ModItems.WRENCH.get()) && !player.getOffhandItem().isEmpty()) {
+        if (stack.is(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(),
+                ResourceLocation.fromNamespaceAndPath("aestheticseating", "wrench"))) && !player.getOffhandItem().isEmpty()) {
             if (!level.isClientSide) {
                 Item offhandItem = player.getOffhandItem().getItem();
                 Block block = Block.byItem(offhandItem);
