@@ -6,6 +6,7 @@ import net.alminoris.aestheticseating.util.helper.VoxelShapeHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
@@ -29,6 +30,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,7 +75,8 @@ public class Settee extends SeatingFurniture
         net.minecraft.core.Direction currentFacing = state.getValue(FACING);
 
         // Wrench tool tag: "aestheticseating:wrench"
-        if (stack.is(ItemTags.create(ResourceLocation.fromNamespaceAndPath("aestheticseating", "wrench"))))
+        if (stack.is(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(),
+                ResourceLocation.fromNamespaceAndPath("aestheticseating", "wrench"))))
         {
             if (!level.isClientSide)
             {
