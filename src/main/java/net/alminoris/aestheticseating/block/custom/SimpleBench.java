@@ -126,7 +126,9 @@ public class SimpleBench extends SeatingFurniture
         }
 
         // Add backrest with wrench + matching offhand item
-        if (!currentBackrest && isWrench(stack) && Block.byItem(player.getOffhandItem().getItem()) != Blocks.AIR)
+        if (!currentBackrest && stack.is(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(),
+                ResourceLocation.fromNamespaceAndPath("aestheticseating", "wrench")))
+                && Block.byItem(player.getOffhandItem().getItem()) != Blocks.AIR)
         {
             if (!world.isClientSide)
             {
@@ -147,12 +149,6 @@ public class SimpleBench extends SeatingFurniture
         }
 
         return super.use(state, world, pos, player, hand, hit);
-    }
-
-    private boolean isWrench(ItemStack stack)
-    {
-        return stack.is(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(),
-                ResourceLocation.fromNamespaceAndPath("aestheticseating", "wrench")));
     }
 
     private void damageOrConsume(ItemStack stack, Player player)
