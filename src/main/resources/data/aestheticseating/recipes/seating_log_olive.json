@@ -3,10 +3,10 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "wildfields:olive_log"
+      "item": "aestheticseating:olive_log"
     },
     "/": {
-      "item": "wildfields:olive_log"
+      "item": "aestheticseating:olive_log"
     }
   },
   "pattern": [

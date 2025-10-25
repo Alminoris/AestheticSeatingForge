@@ -3,10 +3,10 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "wildfields:tamarisk_log"
+      "item": "aestheticseating:tamarisk_log"
     },
     "/": {
-      "item": "wildfields:tamarisk_log"
+      "item": "aestheticseating:tamarisk_log"
     }
   },
   "pattern": [

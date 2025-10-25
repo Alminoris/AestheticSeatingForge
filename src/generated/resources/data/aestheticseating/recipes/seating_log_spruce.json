@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:spruce_log"
+    }
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "item": "aestheticseating:seating_log_spruce"
+  },
+  "show_notification": true
+}

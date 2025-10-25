@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:warped_slab"
+    },
+    "/": {
+      "item": "minecraft:warped_stem"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "###",
+    "/ /"
+  ],
+  "result": {
+    "item": "aestheticseating:simple_chair_warped"
+  },
+  "show_notification": true
+}

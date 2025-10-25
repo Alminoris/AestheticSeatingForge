@@ -6,7 +6,7 @@
       "item": "minecraft:smooth_stone"
     },
     "/": {
-      "item": "wildfields:fossil_marlstone_block"
+      "item": "aestheticseating:fossil_marlstone_block"
     }
   },
   "pattern": [

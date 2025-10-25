@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gray_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:gray_concrete"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_lime_wool": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:lime_wool"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "aestheticseating:sofa_lime"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_lime_wool",
+      "has_gray_concrete",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "aestheticseating:sofa_lime"
+    ]
+  },
+  "sends_telemetry_event": false
+}

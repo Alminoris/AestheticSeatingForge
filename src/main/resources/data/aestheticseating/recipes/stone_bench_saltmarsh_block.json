@@ -6,7 +6,7 @@
       "item": "minecraft:smooth_stone"
     },
     "/": {
-      "item": "wildfields:saltmarsh_block"
+      "item": "aestheticseating:saltmarsh_block"
     }
   },
   "pattern": [

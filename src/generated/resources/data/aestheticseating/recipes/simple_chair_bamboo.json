@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:bamboo_slab"
+    },
+    "/": {
+      "item": "minecraft:bamboo_block"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "###",
+    "/ /"
+  ],
+  "result": {
+    "item": "aestheticseating:simple_chair_bamboo"
+  },
+  "show_notification": true
+}

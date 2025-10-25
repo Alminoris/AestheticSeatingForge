@@ -6,7 +6,7 @@
       "item": "minecraft:smooth_stone"
     },
     "/": {
-      "item": "wildfields:dolomite_block"
+      "item": "aestheticseating:dolomite_block"
     }
   },
   "pattern": [
