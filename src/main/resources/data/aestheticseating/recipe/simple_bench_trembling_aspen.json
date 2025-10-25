@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "wildfields:trembling_aspen_slab"
+    },
+    "/": {
+      "item": "wildfields:trembling_aspen_log"
+    }
+  },
+  "pattern": [
+    "##",
+    "//"
+    
+  ],
+  "result": {
+    "count": 1,
+    "id": "aestheticseating:simple_bench_trembling_aspen"
+  }
+}

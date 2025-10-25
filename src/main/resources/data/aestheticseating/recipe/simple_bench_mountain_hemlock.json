@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "arborealnature:mountain_hemlock_slab"
+    },
+    "/": {
+      "item": "arborealnature:mountain_hemlock_log"
+    }
+  },
+  "pattern": [
+    "##",
+    "//"
+    
+  ],
+  "result": {
+    "count": 1,
+    "id": "aestheticseating:simple_bench_mountain_hemlock"
+  }
+}
