@@ -21,5 +21,12 @@ public class DataGenerators
 
         generator.addProvider(new ModBlockStateProvider(generator, existingFileHelper));
         generator.addProvider(new ModItemModelProvider(generator, existingFileHelper));
+
+        generator.addProvider(new ModLanguageProviderEnUs(generator));
+        generator.addProvider(new ModLanguageProviderDeDe(generator));
+        generator.addProvider(new ModLanguageProviderEsEs(generator));
+        generator.addProvider(new ModLanguageProviderFrFr(generator));
+        generator.addProvider(new ModLanguageProviderRuRu(generator));
+        generator.addProvider(new ModLanguageProviderUkUa(generator));
     }
 }
