@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:birch_log"
+    }
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "item": "aestheticseating:seating_log_birch"
+  },
+  "show_notification": true
+}

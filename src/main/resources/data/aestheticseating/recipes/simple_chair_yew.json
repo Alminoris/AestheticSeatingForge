@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "arborealnature:yew_slab"
+    },
+    "/": {
+      "item": "arborealnature:yew_log"
+    }
+  },
+  "pattern": [
+    "###",
+    "/ /"
+    
+  ],
+  "result": {
+    "count": 1,
+    "item": "aestheticseating:simple_chair_yew"
+  }
+}

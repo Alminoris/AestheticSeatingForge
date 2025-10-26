@@ -6,7 +6,7 @@
       "item": "minecraft:smooth_stone"
     },
     "/": {
-      "item": "wildfields:loamy_marl_block"
+      "item": "aestheticseating:loamy_marl_block"
     }
   },
   "pattern": [

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:spruce_slab"
+    },
+    "/": {
+      "item": "minecraft:spruce_log"
+    }
+  },
+  "pattern": [
+    "###",
+    "/ /"
+  ],
+  "result": {
+    "item": "aestheticseating:simple_stool_spruce"
+  },
+  "show_notification": true
+}
