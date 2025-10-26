@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "//"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:pink_wool"
+    },
+    "/": {
+      "item": "minecraft:gray_concrete"
+    }
+  },
+  "result": {
+    "item": "aestheticseating:sofa_pink"
+  }
+}

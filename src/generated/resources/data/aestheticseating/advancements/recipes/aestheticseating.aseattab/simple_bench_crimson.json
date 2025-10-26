@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "aestheticseating:simple_bench_crimson"
+    ]
+  },
+  "criteria": {
+    "has_crimson_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:crimson_slab"
+            ]
+          }
+        ]
+      }
+    },
+    "has_crimson_stem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:crimson_stem"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "aestheticseating:simple_bench_crimson"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_crimson_slab",
+      "has_crimson_stem",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "###",
+    "/ /"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:crimson_slab"
+    },
+    "/": {
+      "item": "minecraft:crimson_stem"
+    }
+  },
+  "result": {
+    "item": "aestheticseating:simple_chair_crimson"
+  }
+}

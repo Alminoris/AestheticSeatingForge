@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "//"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:light_gray_wool"
+    },
+    "/": {
+      "item": "minecraft:gray_concrete"
+    }
+  },
+  "result": {
+    "item": "aestheticseating:sofa_light_gray"
+  }
+}

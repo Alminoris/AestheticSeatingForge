@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "//"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:spruce_slab"
+    },
+    "/": {
+      "item": "minecraft:spruce_log"
+    }
+  },
+  "result": {
+    "item": "aestheticseating:simple_bench_spruce"
+  }
+}

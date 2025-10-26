@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "aestheticseating:simple_chair_dark_oak"
+    ]
+  },
+  "criteria": {
+    "has_dark_oak_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:dark_oak_slab"
+            ]
+          }
+        ]
+      }
+    },
+    "has_dark_oak_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:dark_oak_log"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "aestheticseating:simple_chair_dark_oak"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dark_oak_slab",
+      "has_dark_oak_log",
+      "has_the_recipe"
+    ]
+  ]
+}
