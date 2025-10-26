@@ -45,7 +45,7 @@ public class ModLanguageProviderEnUs extends LanguageProvider
         add("item." + AestheticSeating.MOD_ID + ".cushion_remover","Cushion Remover");
         add("item." + AestheticSeating.MOD_ID + ".wrench","Wrench");
 
-        add("itemgroup.aedgstab","Aesthetic Edges");
+        add("itemgroup.aseattab", "Aesthetic Seating");
     }
 
     public static String movePrefix(String input, String[] arr)
