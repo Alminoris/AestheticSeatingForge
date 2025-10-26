@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:acacia_log"
+    }
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "item": "aestheticseating:seating_log_acacia"
+  }
+}

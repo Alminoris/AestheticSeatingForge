@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:jungle_slab"
+    },
+    "/": {
+      "item": "minecraft:jungle_log"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "###",
+    "/ /"
+  ],
+  "result": {
+    "item": "aestheticseating:simple_chair_jungle"
+  }
+}

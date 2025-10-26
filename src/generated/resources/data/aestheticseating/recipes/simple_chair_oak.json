@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:oak_slab"
+    },
+    "/": {
+      "item": "minecraft:oak_log"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "###",
+    "/ /"
+  ],
+  "result": {
+    "item": "aestheticseating:simple_chair_oak"
+  }
+}

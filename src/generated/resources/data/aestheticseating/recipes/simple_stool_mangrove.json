@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:mangrove_slab"
+    },
+    "/": {
+      "item": "minecraft:mangrove_log"
+    }
+  },
+  "pattern": [
+    "###",
+    "/ /"
+  ],
+  "result": {
+    "item": "aestheticseating:simple_stool_mangrove"
+  }
+}

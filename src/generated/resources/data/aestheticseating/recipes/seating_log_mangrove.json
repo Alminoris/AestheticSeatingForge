@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:mangrove_log"
+    }
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "item": "aestheticseating:seating_log_mangrove"
+  }
+}

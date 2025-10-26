@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:crimson_stem"
+    }
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "item": "aestheticseating:seating_log_crimson"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:birch_slab"
+    },
+    "/": {
+      "item": "minecraft:birch_log"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "###",
+    "/ /"
+  ],
+  "result": {
+    "item": "aestheticseating:simple_chair_birch"
+  }
+}
